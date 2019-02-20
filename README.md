@@ -1,0 +1,43 @@
+# VoiceIt API 2.0 IVR Demo
+IVR demo showing an integration between VoiceIt's API 2.0 and Twilio's API
+
+## Pre-Requisites
+
+- Twilio Account
+-- [Twilio Developer Registration](https://www.twilio.com/try-twilio)
+- VoiceIt Account
+-- [VoiceIt Developer Registration](https://voiceit.io/signup)
+- Heroku Account for hosting app
+-- [Heroku Developer Registration](https://signup.heroku.com)
+
+
+After installation you will also need to log in to your Twilio account and point a purchased phone number to this new application like shown below. Make sure to set the webhook for when call comes in to the right URL and set the HTTP request to POST.
+
+<img src="/PointTwilioNumber.png" alt="API Key and Token" width="800px" />
+
+You can call the Twilio number you have pointed to the application and try out the demo, and modify it as desired for your own use case.
+
+## Manual Install
+
+### Install
+`npm install`
+
+### Configure
+
+1. Create a .env file and set the environment variables `API_KEY` and `API_TOKEN` to your VoiceIt API key and token, `VOICEPRINT_PHRASE` to a phrase that you have pre - approved in the VoiceIt console, `CONTENT_LANGUAGE` to associated contentLanguage, and `DATABASE_URL` to the DB added below.
+2. `npm start`
+3. Point a Twilio Phone number to VoiceURL to your `http://app-name-here/incoming_call`
+4. Make sure the HTTP Method is set to POST
+
+You may need to install Postgres locally: https://devcenter.heroku.com/articles/heroku-postgresql#local-setup
+
+    $ heroku addons:create heroku-postgresql:hobby-dev
+    $ heroku pg:psql
+    => create table users (phone text, userId text);
+
+
+### Deploy to Heroku
+
+    $ heroku create
+    $ git push heroku master
+    $ heroku config:set API_KEY=123456abcdef123456 API_TOKEN=123456abcdef123456 VOICEPRINT_PHRASE='Never forget tomorrow is a new day' CONTENT_LANGUAGE=en-US DATABASE_URL=postgres://
