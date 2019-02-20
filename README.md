@@ -24,10 +24,8 @@ You can call the Twilio number you have pointed to the application and try out t
 
 ### Configure
 
-1. Create a .env file and set the environment variables `API_KEY` and `API_TOKEN` to your VoiceIt API key and token, `VOICEPRINT_PHRASE` to a phrase that you have pre - approved in the VoiceIt console, `CONTENT_LANGUAGE` to associated contentLanguage, and `DATABASE_URL` to the DB added below.
+1. Create a .env file and set the environment variables `API_KEY` and `API_TOKEN` to your VoiceIt API key and token, `VOICEPRINT_PHRASE` to a phrase that you have pre - approved in the VoiceIt console, `CONTENT_LANGUAGE` to associated contentLanguage, and `DATABASE_URL` from the DB added below.
 2. `npm start`
-3. Point a Twilio Phone number to VoiceURL to your `http://app-name-here/incoming_call`
-4. Make sure the HTTP Method is set to POST
 
 You may need to install Postgres locally: https://devcenter.heroku.com/articles/heroku-postgresql#local-setup
 
