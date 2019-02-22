@@ -24,10 +24,10 @@ You can call the Twilio number you have pointed to the application and try out t
 
 ### Configure
 
-1. Create a .env file and set the environment variables `API_KEY` and `API_TOKEN` to your VoiceIt API key and token, `VOICEPRINT_PHRASE` to a phrase that you have pre - approved in the VoiceIt console, `CONTENT_LANGUAGE` to associated contentLanguage, and `DATABASE_URL` from the DB added below.
+1. To run locally, create a .env file and set the environment variables `API_KEY` and `API_TOKEN` to your VoiceIt API key and token, `VOICEPRINT_PHRASE` to a phrase that you have pre - approved in the VoiceIt console, `CONTENT_LANGUAGE` to associated contentLanguage, and `DATABASE_URL` from the DB added below.
 2. `npm start`
 
-You may need to install Postgres locally: https://devcenter.heroku.com/articles/heroku-postgresql#local-setup
+We are using Postgres for our example, so you may need to install Postgres locally: https://devcenter.heroku.com/articles/heroku-postgresql#local-setup
 
     $ heroku addons:create heroku-postgresql:hobby-dev
     $ heroku pg:psql
