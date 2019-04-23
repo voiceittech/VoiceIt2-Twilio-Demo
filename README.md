@@ -10,10 +10,10 @@ IVR demo showing an integration between VoiceIt's API 2.0 and Twilio's API
 
 After installation you will also need to log in to your Twilio account and point a purchased phone number to this new application like shown below. Make sure to set the webhook for when call comes in to the right URL and set the HTTP request to POST.
 
-![PointTwilioNumber.png](PointTwilioNumber.png)
+![./PointTwilioNumber.png](PointTwilioNumber)
 
 You can get the App Name from your Heroku app console.
-![heroku.png](herokuconsole)
+![./heroku.png](herokuconsole)
 
 You can call the Twilio number you have pointed to the application and try out the demo, and modify it as desired for your own use case. You can also check out our demo by calling <a href="tel:1-612-400-7423">(612) 400-7423</a>.
 
