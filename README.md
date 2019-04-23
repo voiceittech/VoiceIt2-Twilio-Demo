@@ -10,10 +10,12 @@ IVR demo showing an integration between VoiceIt's API 2.0 and Twilio's API
 
 After installation you will also need to log in to your Twilio account and point a purchased phone number to this new application like shown below. Make sure to set the webhook for when call comes in to the right URL and set the HTTP request to POST.
 
-![twilioconsole](./twilio.png)
-
-You can get the App Name from your Heroku app console.
+1. Get the App URL from your Heroku app console.
 ![herokuconsole](./herokuapp.png)
+
+
+2. Add the App URL to the Twilio Phone Number POST Webhook (Twilio Console > Phone Number > Phone Number Settings > "A Call Comes In...")
+![twilioconsole](./twilio.png)
 
 You can call the Twilio number you have pointed to the application and try out the demo, and modify it as desired for your own use case. You can also check out our demo by calling <a href="tel:1-612-400-7423">(612) 400-7423</a>.
 
@@ -24,8 +26,10 @@ You can call the Twilio number you have pointed to the application and try out t
 
 ### Configure
 
-1. To run locally, create a .env file and set the environment variables `API_KEY` and `API_TOKEN` to your VoiceIt API key and token, `VOICEPRINT_PHRASE` to a phrase that you have pre - approved in the VoiceIt console, `CONTENT_LANGUAGE` to associated contentLanguage, and `DATABASE_URL` from the DB added below.
-2. `npm start`
+1. Clone this repository via the command `git clone https://github.com/voiceittech/VoiceIt2-Twilio-Demo.git`
+2. `cd  VoiceIt2-Twilio-Demo`
+3. To run locally, create a .env file and set the environment variables `API_KEY` and `API_TOKEN` to your VoiceIt API key and token, `VOICEPRINT_PHRASE` to a phrase that you have pre - approved in the VoiceIt console, `CONTENT_LANGUAGE` to associated contentLanguage, and `DATABASE_URL` from the DB added below.
+4. `npm start`
 
 We are using Postgres for our example, so you may need to install Postgres locally: https://devcenter.heroku.com/articles/heroku-postgresql#local-setup
 
