@@ -10,7 +10,7 @@ IVR demo showing an integration between VoiceIt's API 2.0 and Twilio's API
 
 After installation you will also need to log in to your Twilio account and point a purchased phone number to this new application like shown below. Make sure to set the webhook for when call comes in to the right URL and set the HTTP request to POST.
 
-![twilioconsole](./PointTwilioNumber.png)
+![twilioconsole](./twilio.png)
 
 You can get the App Name from your Heroku app console.
 ![herokuconsole](./heroku.png)
