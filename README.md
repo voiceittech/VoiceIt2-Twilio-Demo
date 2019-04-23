@@ -13,7 +13,7 @@ After installation you will also need to log in to your Twilio account and point
 ![twilioconsole](./twilio.png)
 
 You can get the App Name from your Heroku app console.
-![herokuconsole](./heroku.png)
+![herokuconsole](./herokuapp.png)
 
 You can call the Twilio number you have pointed to the application and try out the demo, and modify it as desired for your own use case. You can also check out our demo by calling <a href="tel:1-612-400-7423">(612) 400-7423</a>.
 
