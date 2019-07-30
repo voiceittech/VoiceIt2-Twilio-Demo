@@ -15,7 +15,7 @@
     "express": "^4.15.2",
     "pg": "^7.8.0",
     "twilio": "^3.28.0",
-    "voiceit2-nodejs": "^2.2.3"
+    "voiceit2-nodejs": "^2.3.1"
   },
   "devDependencies": {
     "request": "^2.81.0",

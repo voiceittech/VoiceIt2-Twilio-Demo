@@ -102,10 +102,10 @@ const enrollOrVerify = async (req, res) => {
   // instructions, otherwise, we always assume their intent is to verify.
   if (digits == 1) {
     //Delete User's voice enrollments and re-enroll
-    myVoiceIt.deleteAllVoiceEnrollments({
+    myVoiceIt.deleteAllEnrollments({
       userId: userId,
       }, async (jsonResponse)=>{
-        console.log("deleteAllVoiceEnrollments JSON: ", jsonResponse.message);
+        console.log("deleteAllEnrollments JSON: ", jsonResponse.message);
         speak(twiml, "You have chosen to re enroll your voice, you will now be asked to say a phrase three times, then you will be able to log in with that phrase");
         twiml.redirect('/enroll');
         res.type('text/xml');
@@ -128,10 +128,10 @@ const enrollOrVerify = async (req, res) => {
         } else{
           speak(twiml, "You do not have enough enrollments and need to re enroll your voice.");
           //Delete User's voice enrollments and re-enroll
-          myVoiceIt.deleteAllVoiceEnrollments({
+          myVoiceIt.deleteAllEnrollments({
             userId: userId,
             }, async (jsonResponse)=>{
-              console.log("deleteAllVoiceEnrollments JSON: ", jsonResponse.message);
+              console.log("deleteAllEnrollments JSON: ", jsonResponse.message);
               twiml.redirect('/enroll');
               res.type('text/xml');
               res.send(twiml.toString());
