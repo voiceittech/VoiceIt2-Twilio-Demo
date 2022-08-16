@@ -70,6 +70,12 @@ exports.handler = async function (context, event, callback) {
         twiml.redirect(
           '/voice/registered_user_menu?digits=TIMEOUT',
         );
+        response
+          .setBody(twiml.toString())
+          .appendHeader('Content-Type', 'text/xml')
+          .setCookie('userId', userId);
+
+        callback(null, response);
       } else {
         // Create a new user for new number
         myVoiceIt.createUser(async (createUserResponse) => {
@@ -96,14 +102,14 @@ exports.handler = async function (context, event, callback) {
           );
           /* Code for inserting new user into a database */
           twiml.redirect('/voice/enroll');
+          response
+            .setBody(twiml.toString())
+            .appendHeader('Content-Type', 'text/xml')
+            .setCookie('userId', userId);
+
+          callback(null, response);
         });
       }
-      response
-        .setBody(twiml.toString())
-        .appendHeader('Content-Type', 'text/xml')
-        .setCookie('userId', userId);
-
-      callback(null, response);
     },
   );
   // callback(null, twiml);
