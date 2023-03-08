@@ -52,7 +52,7 @@ exports.handler = async function (context, event, callback) {
 
     if (jsonResponse.responseCode === 'SUCC') {
       twiml.say('Verification successful!');
-      twiml.say('Thank you for calling voice its voice biometrics demo. Have a nice day!');
+      twiml.say('Thank you for calling enquantas, voice biometrics demo. Have a nice day!');
       // Hang up
     } else if (numTries > 2) {
       // 3 attempts failed
