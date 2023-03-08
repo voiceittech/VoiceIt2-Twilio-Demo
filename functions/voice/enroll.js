@@ -3,7 +3,7 @@ exports.handler = async function (context, event, callback) {
   const twiml = new Twilio.twiml.VoiceResponse();
   const enrollmentCount = event.enrollmentCount || 0;
 
-  twiml.say('Please say the following phrase to enroll ');
+  twiml.say('Please say the following phrase to enroll, ');
   twiml.say(context.VOICEPRINT_PHRASE);
 
   twiml.record({
