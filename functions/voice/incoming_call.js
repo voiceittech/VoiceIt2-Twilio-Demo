@@ -58,7 +58,7 @@ exports.handler = async function (context, event, callback) {
       console.log(`jsonResponse${JSON.stringify(checkUserExistsResponse)}`);
       if (checkUserExistsResponse.exists) {
         // Greet the caller when their account profile is recognized by the VoiceIt API.
-        twiml.say('Welcome back to the Voice It Verification Demo, your phone number has been recognized');
+        twiml.say('Welcome back to the Quanta Key Verification Demo, your phone number has been recognized');
         // Let's provide the caller with an opportunity to enroll by typing `1` on
         // their phone's keypad. Use the <Gather> verb to collect user input
         const gather = twiml.gather({
@@ -79,7 +79,7 @@ exports.handler = async function (context, event, callback) {
       } else {
         // Create a new user for new number
         myVoiceIt.createUser(async (createUserResponse) => {
-          twiml.say('Welcome to the Voice It Verification Demo, you are a new user and will now be enrolled');
+          twiml.say('Welcome to the Quanta Key Verification Demo, you are a new user and will now be enrolled');
           userId = createUserResponse.userId;
           /* Code for inserting new user into a database */
           const base = new AirTable({ apiKey: context.AIRTABLE_API_KEY }).base(

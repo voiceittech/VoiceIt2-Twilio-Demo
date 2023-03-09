@@ -73,7 +73,7 @@ exports.handler = async function (context, event, callback) {
     //   async (createGroupResponse) => {
     //     myVoiceIt.addUserToGroup({ userId, groupId: createGroupResponse.groupId });
     // eslint-disable-next-line max-len
-    //     twiml.say('Welcome to the Voice It Verification Demo Test, you are a new user and will now be enrolled');
+    //     twiml.say('Welcome to the Quanta Key Verification Demo Test, you are a new user and will now be enrolled');
     //     userId = createUserResponse.userId;
     //     /* Code for inserting new user into a database */
     //     const base = new AirTable({ apiKey: context.AIRTABLE_API_KEY }).base(
