@@ -48,7 +48,7 @@ exports.handler = async function (context, event, callback) {
 
     if (jsonResponse.responseCode === 'SUCC') {
       twiml.say('Verification successful!');
-      twiml.say('Thank you for calling enquantas, voice biometrics demo. Have a nice day!');
+      twiml.say('Thank you for calling voice it, voice biometrics demo. Have a nice day!');
       // twiml.play({
       //     digits: 'wwww3'
       // });

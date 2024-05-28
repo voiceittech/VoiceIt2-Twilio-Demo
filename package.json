@@ -23,13 +23,15 @@
     "twilio-run": "^3.4.2"
   },
   "engines": {
-    "node": "14"
+    "node": "18"
   },
   "eslintConfig": {
     "extends": [
       "airbnb"
     ],
-    "ignorePatterns": [".twilioserverlessrc"],
+    "ignorePatterns": [
+      ".twilioserverlessrc"
+    ],
     "rules": {
       "linebreak-style": 0,
       "indent": 2,
